@@ -17,7 +17,13 @@ namespace final_exam_2026.Models
         public string ContactNumber { get; set; }
         public string MembershipType { get; set; }
 
+        public virtual List<TrainingSession> TrainingSessions { get; set; }
+
         // Constructors
+        public Member()
+        {
+            TrainingSessions = new List<TrainingSession>();
+        }
 
         // Methods
 

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.37314.3 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "final_exam_2026", "final_exam_2026\final_exam_2026.csproj", "{96B953F6-3A1C-48F7-9615-C1DEF2C158F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCreation", "DataCreation\DataCreation.csproj", "{31D16DD7-ADEA-4B3D-BA2B-1455A5CA0DE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{96B953F6-3A1C-48F7-9615-C1DEF2C158F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96B953F6-3A1C-48F7-9615-C1DEF2C158F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96B953F6-3A1C-48F7-9615-C1DEF2C158F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D16DD7-ADEA-4B3D-BA2B-1455A5CA0DE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D16DD7-ADEA-4B3D-BA2B-1455A5CA0DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D16DD7-ADEA-4B3D-BA2B-1455A5CA0DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D16DD7-ADEA-4B3D-BA2B-1455A5CA0DE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,12 +1,60 @@
 ﻿<Window x:Class="final_exam_2026.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:final_exam_2026"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="50*"/>
+          
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Members" Margin="10"/>
+        <ListBox Grid.Row="1" Grid.Column="0" x:Name="lbxMembers" Margin="10" Grid.RowSpan="3" SelectionChanged="lbxMembers_SelectionChanged"/>
+
+        <Label Grid.Row="0" Grid.Column="1" Content="Member Details" Margin="10"/>
+
+        <Grid Grid.Row="1" Grid.Column="1" Margin="10" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="ID:" />
+            <TextBlock x:Name="tblkID" Grid.Row="0" Grid.Column="0" Margin="20" Text="123455" />
+            <Label Grid.Row="0" Grid.Column="1"  Content="First Name:" />
+            <TextBlock x:Name="tblkFirstName" Grid.Row="0" Grid.Column="1" Margin="20" Text="First Name" />
+            <Label Grid.Row="0" Grid.Column="2"  Content="Last Name:" />
+            <TextBlock x:Name="tblkSurname" Grid.Row="0" Grid.Column="2" Margin="20" Text="Last Name"/>
+            <Label Grid.Row="1" Grid.Column="0"  Content="Here:" />
+            <TextBlock x:Name="tblkContactNumber" Grid.Row="1" Grid.Column="0" Margin="20" Text="Contact Number" />
+            <Label Grid.Row="1" Grid.Column="1"  Content="Membership Type:" />
+            <TextBlock x:Name="tblkMembershipType" Grid.Row="1" Grid.Column="1" Margin="20" Text="Membership Type" />
+            <Label Grid.Row="1" Grid.Column="2"  Content="Date of Birth:" />
+            <TextBlock x:Name="tblkDateOfBirth" Margin="20" Grid.Column="2" Grid.Row="1" Text="DOB"/>
+        </Grid>
+
+        <Label Grid.Row="2" Grid.Column="1" Content="Training Sessions" Margin="10"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="Add Training Session" HorizontalAlignment="Left" Click="btnAddTrainingSession_Click" Margin="10"/>
+        <ListBox Grid.Row="3" Grid.Column="1" Margin="10" Grid.ColumnSpan="2" x:Name="lbxTrainingSessions"/>
+
     </Grid>
 </Window>

@@ -16,8 +16,15 @@ namespace final_exam_2026.Models
         public int DurationMinutes { get; set; }
         public string CoachNotes { get; set; }
 
+        public virtual int MemberId { get; set; }
+        public virtual Member Member { get; set; }
+
         // Constructors
 
         // Methods
+        override public string ToString()
+        {
+            return $"{SessionDate}: {SessionType} ({DurationMinutes}) mins {CoachNotes}";
+        }
     }
 }
