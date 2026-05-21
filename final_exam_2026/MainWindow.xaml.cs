@@ -57,5 +57,21 @@ namespace final_exam_2026
                 }
             }
         }
+
+        private void btnAddTrainingSession_Click(object sender, RoutedEventArgs e)
+        {
+            Member selectedMember = lbxMembers.SelectedItem as Member;
+            if (selectedMember != null)
+            {
+                AddNewSessionWindow addNewSessionWindow = new AddNewSessionWindow(selectedMember, db);
+                appointmentWindow.ShowDialog();
+
+                var appointments = db.Appointments.Where(a => a.PatientId == selectedPatient.PatientId).OrderByDescending(a => a.AppointmentTime).ToList();
+
+                // refresh screen
+                lbxAppointments.ItemsSource = null;
+                lbxAppointments.ItemsSource = appointments;
+            }
+        }
     }
 }
